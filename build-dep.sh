@@ -66,15 +66,16 @@ fi
 
 if [ ! -d libssh2-${VER_LIBSSH2} ]; then
 tar xf libssh2-${VER_LIBSSH2}.tar.gz && \
-	cd libssh2-${VER_LIBSSH2} && \
-	./configure \
-		--disable-shared \
-		--enable-static \
-		--prefix=$PREFIX \
-		--with-openssl \
-		LIBS="-lpthread -ldl" && \
-	make install
-	if [ $? -ne 0 ]; then echo !!! failed to build libssh2 !!!; exit; fi
-	cd ..
+        cd libssh2-${VER_LIBSSH2} && \
+        ./configure \
+                --disable-shared \
+                --enable-static \
+                --prefix=$PREFIX \
+                --with-libssl \
+                LIBS="-lpthread -ldl" && \
+        make install
+        if [ $? -ne 0 ]; then echo !!! failed to build libssh2 !!!; exit; fi
+        cd ..
 fi
+
 
