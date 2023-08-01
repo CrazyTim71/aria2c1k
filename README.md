@@ -3,9 +3,9 @@
 
 The patch file is the only thing necessary.
 
-Steps:
-./download.sh
-./build-dep.sh
-./build.sh
+Steps: <br>
+```./download.sh``` <br>
+```./build-dep.sh``` <br>
+```./build.sh``` <br>
 
 The binary will be under ../aria2-1.36.0/src/aria2c
